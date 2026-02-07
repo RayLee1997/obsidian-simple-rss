@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>RSS Subscriptions</title>
+    <dateCreated>Wed, 04 Feb 2026 12:00:00 GMT</dateCreated>
+    <dateModified>Wed, 04 Feb 2026 12:00:00 GMT</dateModified>
+  </head>
+  <body>
+    <!-- 深度科技与极客文化 -->
+    <outline text="深度科技与极客文化" title="深度科技与极客文化" _isOpen="true">
+      <outline 
+        type="rss" 
+        text="Hacker News (精选)" 
+        title="Hacker News (精选)" 
+        xmlUrl="https://hnrss.org/frontpage" 
+        htmlUrl="https://news.ycombinator.com/"
+        description="HN 首页热门，技术与创业话题"/>
+      
+      <outline 
+        type="rss" 
+        text="The Verge" 
+        title="The Verge" 
+        xmlUrl="https://www.theverge.com/rss/index.xml" 
+        htmlUrl="https://www.theverge.com/"
+        description="科技与生活方式的交叉点，产品新闻与深度特稿"/>
+      
+      <outline 
+        type="rss" 
+        text="Ars Technica" 
+        title="Ars Technica" 
+        xmlUrl="https://arstechnica.com/feed/" 
+        htmlUrl="https://arstechnica.com/"
+        description="硬核技术深度分析、科学与游戏"/>
+      
+      <outline 
+        type="rss" 
+        text="WIRED" 
+        title="WIRED" 
+        xmlUrl="https://www.wired.com/feed/rss" 
+        htmlUrl="https://www.wired.com/"
+        description="科技对文化、政策和社会的影响"/>
+      
+      <outline 
+        type="rss" 
+        text="Daring Fireball" 
+        title="Daring Fireball" 
+        xmlUrl="https://daringfireball.net/feeds/main" 
+        htmlUrl="https://daringfireball.net/"
+        description="John Gruber 的独立博客，Apple 生态权威评论"/>
+    </outline>
+
+    <!-- 商业与战略洞察 -->
+    <outline text="商业与战略洞察" title="商业与战略洞察" _isOpen="true">
+      <outline 
+        type="rss" 
+        text="Stratechery" 
+        title="Stratechery" 
+        xmlUrl="https://stratechery.com/feed/" 
+        htmlUrl="https://stratechery.com/"
+        description="Ben Thompson 的科技商业战略分析"/>
+      
+      <outline 
+        type="rss" 
+        text="Benedict Evans" 
+        title="Benedict Evans" 
+        xmlUrl="https://www.ben-evans.com/rss" 
+        htmlUrl="https://www.ben-evans.com/"
+        description="前 a16z 合伙人，宏观科技趋势与市场分析"/>
+      
+      <outline 
+        type="rss" 
+        text="TechCrunch" 
+        title="TechCrunch" 
+        xmlUrl="https://techcrunch.com/feed/" 
+        htmlUrl="https://techcrunch.com/"
+        description="创业公司、融资、产品发布的第一手新闻"/>
+    </outline>
+
+    <!-- 开发者与工程实践 -->
+    <outline text="开发者与工程实践" title="开发者与工程实践" _isOpen="true">
+      <outline 
+        type="rss" 
+        text="Martin Fowler" 
+        title="Martin Fowler" 
+        xmlUrl="https://martinfowler.com/feed.atom" 
+        htmlUrl="https://martinfowler.com/"
+        description="软件架构设计大师，重构与企业应用模式"/>
+      
+      <outline 
+        type="rss" 
+        text="Netflix TechBlog" 
+        title="Netflix TechBlog" 
+        xmlUrl="https://netflixtechblog.com/feed" 
+        htmlUrl="https://netflixtechblog.com/"
+        description="流媒体巨头的高并发、微服务、数据工程实践"/>
+      
+      <outline 
+        type="rss" 
+        text="Uber Engineering" 
+        title="Uber Engineering" 
+        xmlUrl="https://eng.uber.com/feed/" 
+        htmlUrl="https://eng.uber.com/"
+        description="大规模分布式系统、机器学习工程案例"/>
+      
+      <outline 
+        type="rss" 
+        text="GitHub Blog" 
+        title="GitHub Blog" 
+        xmlUrl="https://github.blog/feed/" 
+        htmlUrl="https://github.blog/"
+        description="GitHub 官方产品更新、开源生态与开发者工具"/>
+    </outline>
+
+    <!-- 独立思考与杂谈 -->
+    <outline text="独立思考与杂谈" title="独立思考与杂谈" _isOpen="true">
+      <outline 
+        type="rss" 
+        text="Paul Graham Essays" 
+        title="Paul Graham Essays" 
+        xmlUrl="http://www.aaronsw.com/2002/feeds/pgessays.xml" 
+        htmlUrl="http://www.paulgraham.com/articles.html"
+        description="Y Combinator 创始人，创业与人生哲学"/>
+      
+      <outline 
+        type="rss" 
+        text="Naval Ravikant" 
+        title="Naval Ravikant" 
+        xmlUrl="https://nav.al/feed" 
+        htmlUrl="https://nav.al/"
+        description="硅谷天使投资人,财富与幸福的哲学"/>
+      
+      <outline 
+        type="rss" 
+        text="Wait But Why" 
+        title="Wait But Why" 
+        xmlUrl="https://waitbutwhy.com/feed" 
+        htmlUrl="https://waitbutwhy.com/"
+        description="Tim Urban 的长文博客，深度解读复杂话题 (AI, 人类未来)"/>
+    </outline>
+  </body>
+</opml>

@@ -64,11 +64,18 @@ If you want to collect some custom fields not present in the generic format you 
 
 ## Mustache
 
+### What is Mustache?
+
+[Mustache](https://mustache.github.io) is a **logic-less** template syntax used to orchestrate the dynamic generation of content. It is named "Mustache" because of its heavy use of curly braces `{}`.
+
+**Role in this Project:**
+In **Obsidian Simple RSS**, Mustache acts as the flexible rendering engine for your notes. It allows you to define custom **templates** for your RSS feeds. Instead of a fixed note format, you use Mustache tags (like `{{title}}` or `{{link}}`) as placeholders. When the plugin pulls new RSS items, it dynamically replaces these tags with the actual data from the feed, giving you full control over the structure and layout of your generated Obsidian notes.
+
 ### Parser
 
 This project use the nodeJs implementation of [Mustache](https://mustache.github.io) of janl:
 
--   [Mustache Js](https://github.com/janl/mustache.js)
+- [Mustache Js](https://github.com/janl/mustache.js)
 
 You can use all feature implemented in this module in your template
 
@@ -177,13 +184,13 @@ Here is a youtube chanel RSS Feed (of [@Grafana](https://www.youtube.com/@Grafan
 
 Field Type configuration for this youtube RSS
 
--   name: Youtube
--   feed:
-    -   yt:channelId
--   item:
-    -   yt:videoId
-    -   yt:channelId
-    -   media:group
+- name: Youtube
+- feed:
+  - yt:channelId
+- item:
+  - yt:videoId
+  - yt:channelId
+  - media:group
 
 As you can see in this exemple we only need to setup the top level rss's field for `entry` or `feed` to collect all the info into them.
 
@@ -195,14 +202,14 @@ You can also access to an attribute like the video url with `{{&item.media:group
 
 The plugin uses [Mustache](https://mustache.github.io) to format the feeds. You can use the following variables:
 
--   `{{&feed.feedUrl}}` - URL of the feed
--   `{{&feed.title}}` - Title of the feed
--   `{{&feed.description}}` - Description of the feed
--   `{{&feed.link}}` - Link to the feed
--   `{{&item.title}}` - Title of the item
--   `{{&item.author}}` - Author of the item
--   `{{&item.link}}` - Link to the item
--   `{{&item.guid}}` - Item unique identifier
--   `{{&item.comments}}` - Item comments
--   `{{&item.categories}}` - Item categories
--   `{{&item.pubDate}}` - Item publication date
+- `{{&feed.feedUrl}}` - URL of the feed
+- `{{&feed.title}}` - Title of the feed
+- `{{&feed.description}}` - Description of the feed
+- `{{&feed.link}}` - Link to the feed
+- `{{&item.title}}` - Title of the item
+- `{{&item.author}}` - Author of the item
+- `{{&item.link}}` - Link to the item
+- `{{&item.guid}}` - Item unique identifier
+- `{{&item.comments}}` - Item comments
+- `{{&item.categories}}` - Item categories
+- `{{&item.pubDate}}` - Item publication date
