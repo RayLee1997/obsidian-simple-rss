@@ -1,4 +1,4 @@
-import { Plugin } from "obsidian";
+import { Plugin, Notice } from "obsidian";
 import SimpleRSSSettingTab from "./src/Settings/SimpleRSSSettingTab";
 import {
 	DEFAULT_SETTINGS,
@@ -11,10 +11,18 @@ export default class SimpleRSSPlugin extends Plugin {
 	feeds: Feeds;
 
 	async onload() {
-		await this.loadSettings();
+		console.log("Loading Simple RSS Plugin");
+		try {
+			await this.loadSettings();
+			console.log("Simple RSS: Settings loaded successfully");
+		} catch (e) {
+			console.error("Simple RSS: Failed to load settings", e);
+			new Notice("Simple RSS: Failed to load settings. Using defaults.");
+			this.settings = Object.assign({}, DEFAULT_SETTINGS);
+		}
 
 		// This creates an interval that will sync the feeds every timeInterval minutes.
-		if (this.settings.autoPull) {
+		if (this.settings && this.settings.autoPull) {
 			this.registerInterval(
 				window.setInterval(
 					() => this.feeds.syncFeeds(this.app.vault),
@@ -23,12 +31,14 @@ export default class SimpleRSSPlugin extends Plugin {
 			);
 		}
 
+		console.log("Simple RSS: Adding ribbon icon");
 		// This creates an icon in the left ribbon.
 		const ribbonIconEl = this.addRibbonIcon(
 			"refresh-cw",
 			"Simple RSS",
 			(evt: MouseEvent) => {
 				// Called when the user clicks the icon.
+				new Notice("Simple RSS: Syncing feeds...");
 				this.feeds.syncFeeds(this.app.vault);
 			}
 		);
@@ -38,7 +48,7 @@ export default class SimpleRSSPlugin extends Plugin {
 		this.addSettingTab(new SimpleRSSSettingTab(this.app, this));
 	}
 
-	onunload() {}
+	onunload() { }
 
 	async loadSettings() {
 		this.settings = Object.assign(
@@ -49,7 +59,7 @@ export default class SimpleRSSPlugin extends Plugin {
 		this.feeds = new Feeds()
 			.setFeeds(this.settings.feeds)
 			.setFeedTypes(this.settings.feedTypes)
-			.setDefaultPath(this.settings.defaultPath)
+			.setBasePath(this.settings.basePath)
 			.setDefaultTemplate(this.settings.defaultTemplate);
 	}
 

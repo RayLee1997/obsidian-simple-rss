@@ -3,7 +3,7 @@ import SimpleRSSFeed from "src/models/SimpleRSSFeed";
 import SimpleRSSFeedType from "src/models/SimpleRSSFeedType";
 
 export interface SimpleRSSPluginSettings {
-	defaultPath: string;
+	basePath: string;
 	defaultTemplate: string;
 	autoPull: boolean;
 	timeInterval: number;
@@ -12,8 +12,8 @@ export interface SimpleRSSPluginSettings {
 }
 
 export const DEFAULT_SETTINGS: SimpleRSSPluginSettings = {
-	defaultPath: "",
-	defaultTemplate: "Source: {{item.link}}\n\n{{item.description}}",
+	basePath: "",
+	defaultTemplate: "# {{{item.title}}}\n\n**Author:** {{{item.creator}}}\n**Published:** {{{item.pubDate}}}\n**Link:** {{{item.link}}}\n**GUID:** {{{item.guid}}}\n**Tags:** {{item.categories}}\n\n---\n\n## Summary\n\n{{{item.contentSnippet}}}\n\n---\n\n## Content\n\n{{{item.content}}}\n\n---\n\n**ISO Date:** {{{item.isoDate}}}",
 	autoPull: false,
 	timeInterval: 60,
 	feeds: [],

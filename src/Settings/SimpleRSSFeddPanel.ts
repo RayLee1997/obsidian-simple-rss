@@ -92,11 +92,12 @@ export default class SimpleRSSFeedPanel {
 			// Feed Path text field
 			new Setting(containerEl)
 				.setName("Path")
+				.setDesc("Subdirectory under base path (leave empty to use base path directly)")
 				.addSearch(async (search: SearchComponent) => {
 					new FolderSuggest(this.app, search.inputEl);
 					search
 						.setValue(feed.path ?? "")
-						.setPlaceholder(this.plugin.settings.defaultPath)
+						.setPlaceholder("e.g., Tech/AI or leave empty")
 						.onChange(async (value: string) => {
 							this.plugin.settings.feeds[index].path = value;
 							await this.plugin.saveSettings();
