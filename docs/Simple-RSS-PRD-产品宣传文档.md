@@ -7,10 +7,10 @@
 
 ## 📥 立即下载
 
-[![GitHub Release](https://img.shields.io/badge/Download-v0.5.0-blue?style=for-the-badge)](https://github.com/RayLee1997/obsidian-simple-rss/releases)
+[![GitHub Release](https://github.com/RayLee1997/obsidian-simple-rss/tree/master/release)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/RayLee1997/obsidian-simple-rss)
 
-**最新版本**: [simple-rss-v0.5.0.zip](https://github.com/RayLee1997/obsidian-simple-rss/releases/download/v0.5.0/simple-rss-v0.5.0.zip)
+**最新版本**: [simple-rss-v0.5.0.zip](https://github.com/RayLee1997/obsidian-simple-rss/tree/master/release)
 
 **原项目**: [Monnierant/obsidian-simple-rss](https://github.com/monnierant/obsidian-simple-rss)
 

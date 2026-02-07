@@ -19,6 +19,7 @@
 
 #### 1. OPML 导入/导出 + URL 校验
 
+- 参考文件：release/rss/rss_subscriptions_important.opml
 - 📥 从 OPML 文件导入订阅（支持无限层级嵌套）
 - 📤 导出当前订阅为 OPML 文件
 - 🔍 导入前自动校验所有 Feed URL 有效性
